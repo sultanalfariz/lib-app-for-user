@@ -1,0 +1,85 @@
+package com.example.asus.ublib_user.Model;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class FilterResource {
+
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("judul")
+    @Expose
+    private String judul;
+    @SerializedName("pengarang")
+    @Expose
+    private String pengarang;
+    @SerializedName("jenis")
+    @Expose
+    private String jenis;
+    @SerializedName("deskripsi")
+    @Expose
+    private String deskripsi;
+    @SerializedName("status")
+    @Expose
+    private String status;
+    @SerializedName("gambar")
+    @Expose
+    private String gambar;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
+    }
+
+    public String getPengarang() {
+        return pengarang;
+    }
+
+    public void setPengarang(String pengarang) {
+        this.pengarang = pengarang;
+    }
+
+    public String getJenis() {
+        return jenis;
+    }
+
+    public void setJenis(String jenis) {
+        this.jenis = jenis;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getGambar() {
+        return gambar;
+    }
+
+    public void setGambar(String gambar) {
+        this.gambar = gambar;
+    }
+}

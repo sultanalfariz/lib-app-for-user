@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Fragment.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/title_bar"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/ic_text_ublib"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_15"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/konten_search_buku"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/dp_10"
+        android:layout_below="@id/toolbar_area">
+
+        <EditText
+            android:id="@+id/form_search_materi"
+            android:textSize="@dimen/text_size_14"
+            android:hint="Judul buku"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/bg_search_bar"/>
+
+        <ImageView
+            android:id="@+id/button_search"
+            android:padding="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_8"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/ic_search"
+            android:layout_alignRight="@id/form_search_materi"
+            android:layout_alignTop="@id/form_search_materi"
+            android:layout_alignBottom="@id/form_search_materi"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/konten_filter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:layout_below="@+id/konten_search_buku">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_33"
+            android:layout_marginRight="@dimen/dp_3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_grey">
+
+            <TextView
+                android:id="@+id/btn_novel"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Novel"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:padding="2dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_33"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_grey">
+
+            <TextView
+                android:id="@+id/btn_bahasa"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Bahasa"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:padding="2dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_33"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_grey">
+
+            <TextView
+                android:id="@+id/btn_ekonomi"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Ekonomi"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:padding="2dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_33"
+            android:layout_marginLeft="@dimen/dp_3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_grey">
+
+            <TextView
+                android:id="@+id/btn_teknologi"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Teknologi"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:padding="2dp"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list_buku"
+        android:layout_below="@id/konten_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
